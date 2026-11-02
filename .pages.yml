@@ -1,0 +1,63 @@
+media:
+  input: ""
+  output: fotos
+  extensions: [jpg, jpeg, png, webp]
+
+content:
+  - name: productos
+    label: Productos
+    type: collection
+    path: ""
+    format: json
+    subfolders: false
+    filename: "{categoria}-{nombre}.json"
+    view:
+      primary: nombre
+      fields: [nombre, categoria, estado, precio, orden]
+      sort: [orden, nombre, categoria]
+      default:
+        sort: orden
+        order: asc
+    fields:
+      - name: nombre
+        label: Nombre
+        type: string
+        required: true
+      - name: categoria
+        label: Categoría
+        type: select
+        required: true
+        options:
+          values: [Zagalejos, Picos, Delantales, Chalecos, Zaragüeles]
+      - name: estado
+        label: Estado
+        type: select
+        default: Disponible
+        options:
+          values: [Disponible, Bajo pedido, Agotado]
+      - name: precio
+        label: Precio (por ejemplo 180€)
+        type: string
+      - name: orden
+        label: Orden dentro de su categoría (10 sale primero, 20 después...)
+        type: number
+      - name: destacado
+        label: Destacado en la página de inicio
+        type: boolean
+        default: false
+      - name: oculto
+        label: Ocultar de la web
+        type: boolean
+        default: false
+      - name: descripcion
+        label: Descripción
+        type: text
+      - name: caracteristicas
+        label: Características (si lo dejas vacío se ponen las de siempre)
+        type: string
+        list: true
+      - name: fotos
+        label: Fotos (la primera es la portada)
+        type: image
+        options:
+          multiple: true
