@@ -1,5 +1,5 @@
 media:
-  input: ""
+  input: fotos
   output: fotos
   extensions: [jpg, jpeg, png, webp]
 
