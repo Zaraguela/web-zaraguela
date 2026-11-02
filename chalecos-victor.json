@@ -1,0 +1,20 @@
+{
+  "nombre": "Víctor",
+  "categoria": "Chalecos",
+  "estado": "Disponible",
+  "precio": "90€",
+  "orden": 10,
+  "destacado": false,
+  "descripcion": "Chaleco del siglo XIX en tejido floral. Botones forrados de su propia tela. Disponible calzón para combinar.",
+  "caracteristicas": [
+    "Confeccionado 100% a mano en nuestro taller de Murcia",
+    "Personalizable: elige telas, colores y detalles de acabado",
+    "Pieza única — no encontrarás otra igual",
+    "Ideal para el Bando de la Huerta y eventos tradicionales"
+  ],
+  "fotos": [
+    "fotos/dsc_5774-1791486914959.jpg",
+    "fotos/img_8470-1791486916223.jpg",
+    "fotos/img_8434-1791486917659.jpg"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "nombre": "Ginés",
+  "categoria": "Chalecos",
+  "estado": "Disponible",
+  "precio": "90€",
+  "orden": 20,
+  "destacado": false,
+  "descripcion": "Chaleco del siglo XIX en tejido floral. Botones forrados de su propia tela. Disponible zaragüel con negrilla.",
+  "caracteristicas": [
+    "Confeccionado 100% a mano en nuestro taller de Murcia",
+    "Personalizable: elige telas, colores y detalles de acabado",
+    "Pieza única — no encontrarás otra igual",
+    "Ideal para el Bando de la Huerta y eventos tradicionales"
+  ],
+  "fotos": [
+    "fotos/img_5734.jpg",
+    "fotos/dsc_5834.jpg"
+  ]
+}

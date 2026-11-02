@@ -1,0 +1,22 @@
+{
+  "nombre": "MATILDE",
+  "categoria": "Zagalejos",
+  "estado": "Bajo pedido",
+  "precio": "180€",
+  "orden": 40,
+  "destacado": false,
+  "descripcion": "Zagalejo Inspirado en la indumentaria tradicional de la huerta murciana, con un aire fresco y femenino. La falda en verde musgo da paso a un amplio volante fruncido de estampado floral en tonos azules y rosas, rematado con puntilla de algodón en rosa palo. Por debajo asoma un segundo volante de vichy verde con puntilla crema, que aporta movimiento y ese vuelo tan característico al caminar y bailar.\n\nSe completa con una faltriquera a juego, decorada con los mismos tejidos y puntillas, para llevar a la cintura.\n\nUna pieza pensada para lucir en el Bando de la Huerta o en cualquier celebración huertana, y para guardarla muchos años.",
+  "caracteristicas": [
+    "Confeccionado 100% a mano en nuestro taller de Murcia",
+    "Personalizable: elige telas, colores y detalles de acabado",
+    "Pieza única — no encontrarás otra igual",
+    "Ideal para el Bando de la Huerta y eventos tradicionales"
+  ],
+  "fotos": [
+    "fotos/img_1543-1790499243272.jpg",
+    "fotos/img_3148_1-1790499638310.jpg",
+    "fotos/img_3151-1790499639859.jpg",
+    "fotos/img_1548.jpg",
+    "fotos/img_1577-1790499642905.jpg"
+  ]
+}

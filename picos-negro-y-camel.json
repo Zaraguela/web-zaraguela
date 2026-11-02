@@ -1,0 +1,20 @@
+{
+  "nombre": "Negro y Camel",
+  "categoria": "Picos",
+  "estado": "Disponible",
+  "precio": "50€",
+  "orden": 10,
+  "destacado": false,
+  "descripcion": "Pico elaborado en tejido  100% Tencel en negro con puntilla y entredos de bolillo en 100% Algodón",
+  "caracteristicas": [
+    "Confeccionado 100% a mano en nuestro taller de Murcia",
+    "Personalizable: elige telas, colores y detalles de acabado",
+    "Pieza única — no encontrarás otra igual",
+    "Ideal para el Bando de la Huerta y eventos tradicionales"
+  ],
+  "fotos": [
+    "fotos/img_5804.jpg",
+    "fotos/pico_y_delantal_negro_camel_1.jpg",
+    "fotos/detalle_pico_y_delantal_negro_camel.jpg"
+  ]
+}

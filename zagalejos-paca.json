@@ -1,0 +1,19 @@
+{
+  "nombre": "PACA",
+  "categoria": "Zagalejos",
+  "estado": "Bajo pedido",
+  "precio": "180€",
+  "orden": 30,
+  "destacado": false,
+  "descripcion": "La elegancia se une a la tradición en este zagalejo único. Este modelo es ideal para aquellas que buscan la autenticidad huertana con un color y patrón poco convencionales pero que aporta sobriedad y estilo. El contraste entre los tonos fríos y los acabados oscuros crea una pieza de indumentaria excepcional.\n\nVístete de tradición con la elegancia que solo Zaragüela te ofrece. ¡Un diseño que respeta el pasado pero mira hacia el futuro!",
+  "caracteristicas": [
+    "Este zagalejo cuenta con dos volantes fruncidos en el bajo, van rematados con delicada puntiila de bolillo rústico en negro, no solo añaden volumen y vuelo tradicional, sino que crean un juego de capas al caminar o bailar.",
+    "Es perfecto para combinar, como se muestra en la foto, con un pico y delantal negro con encaje y nervios, o con un delantal blanco para un toque más ligero."
+  ],
+  "fotos": [
+    "fotos/img_1652.jpg",
+    "fotos/img_1627.jpg",
+    "fotos/img_1638.jpg",
+    "fotos/img_1655.jpg"
+  ]
+}

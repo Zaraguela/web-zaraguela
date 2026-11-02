@@ -1,0 +1,22 @@
+{
+  "nombre": "Burdeos y Camel",
+  "categoria": "Picos",
+  "estado": "Disponible",
+  "precio": "50€",
+  "orden": 20,
+  "destacado": false,
+  "descripcion": "Pico elaborado en tejido 100% Lino con puntilla y entredós de bolillo en 100% Algodón",
+  "caracteristicas": [
+    "Confeccionado 100% a mano en nuestro taller de Murcia",
+    "Personalizable: elige telas, colores y detalles de acabado",
+    "Pieza única — no encontrarás otra igual",
+    "Ideal para el Bando de la Huerta y eventos tradicionales"
+  ],
+  "fotos": [
+    "fotos/pico_burdeos_camel_estilo-1792265562856.jpg",
+    "fotos/pico_burdeos_camel_estilo_1-1792265369233.jpg",
+    "fotos/detalle_pico_y_delantal_burdeos_camel.jpg",
+    "fotos/detalle_pico_burdeos_camel.jpg",
+    "fotos/pico_burdeos_camel-1792265366608.jpg"
+  ]
+}

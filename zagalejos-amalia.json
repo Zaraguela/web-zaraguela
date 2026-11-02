@@ -1,0 +1,22 @@
+{
+  "nombre": "AMALIA",
+  "categoria": "Zagalejos",
+  "estado": "Disponible",
+  "precio": "180€",
+  "orden": 50,
+  "destacado": false,
+  "descripcion": "Este zagalejose inspira de la paleta más fresca de la huerta murciana: el azul añil. El cuerpo de la falda combina un delicado estampado de flores azules sobre fondo claro que da luz al conjunto, y termina en un generoso volante fruncido de rayas finas azul y blanco que aporta movimiento en cada paso. Los volantes van rematados con puntilla de bolillo en tono crudode algodón, rematada con piculina en celeste, un detalle artesanal que enmarca el vuelo. Bajo el volante asoma una segunda altura en tejido jaspeado en azul estilo \"Chambray\" con su propia puntilla, creando un efecto de capas muy favorecedor.\n\nEl pico es la pieza que viste los hombros de la huertana, y este lo hemos pensado para aportar luz y textura. Está confeccionado en un tejido azul de aspecto jaspeado, con la irregularidad natural de las fibras que recuerda a los tejidos de antaño.A lo largo de sus bordes lleva un entredós de puntilla en crudo que dibuja una franja azul interior, y termina en una amplia puntilla de bolillo. Se cruza sobre el pecho y se remete en la cintura del delantal, a la manera tradicional.\n\nUn delantal que combina con cualquier zagalejo y eleva el conjunto. Está confeccionado en un tejido marfil en 100% lino de alta calida, con cinturilla ancha y pliegues en el talle que dan vuelo sobre la falda sin abultar.",
+  "caracteristicas": [
+    "Cuerpo en tejido estampado de flores azules sobre fondo claro",
+    "El primer volante fruncido de rayas finas azul y blanco y el segundo volante en azul Chambray",
+    "Remates de puntilla de bolillo color crudo y galón celeste",
+    "Composición: 100 % algodón"
+  ],
+  "fotos": [
+    "fotos/img_5302.jpg",
+    "fotos/dsc_5948.jpeg",
+    "fotos/img_5285.jpg",
+    "fotos/dsc_5959a.jpeg",
+    "fotos/img_5295.jpg"
+  ]
+}

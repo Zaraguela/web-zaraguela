@@ -1,0 +1,19 @@
+{
+  "nombre": "Negrilla Burdeos",
+  "categoria": "Zaragüeles",
+  "estado": "Disponible",
+  "precio": "60€",
+  "orden": 10,
+  "destacado": false,
+  "descripcion": "Negrilla de espiguilla con zaragüel",
+  "caracteristicas": [
+    "Confeccionado 100% a mano en nuestro taller de Murcia",
+    "Personalizable: elige telas, colores y detalles de acabado",
+    "Pieza única — no encontrarás otra igual",
+    "Ideal para el Bando de la Huerta y eventos tradicionales"
+  ],
+  "fotos": [
+    "fotos/img_5734-1791484699905.jpg",
+    "fotos/dsc_5836.jpg"
+  ]
+}
