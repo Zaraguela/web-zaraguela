@@ -30,15 +30,17 @@ MSG = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0
 
 e = html.escape
 def slug(t): return re.sub(r'[^a-z0-9]+', '-', unicodedata.normalize('NFKD', t.lower()).encode('ascii', 'ignore').decode()).strip('-')
-def foto(ruta): return ruta.lstrip('/')
+def foto(ruta): return 'fotos/' + os.path.basename(ruta)  # todas las fotos se publican en fotos/
 
 def leer_productos():
     prods = []
-    for f in sorted(glob.glob(os.path.join(RAIZ, 'productos', '*.json'))):
+    # productos/ (los del panel) y también los .json sueltos en la raíz
+    for f in sorted(glob.glob(os.path.join(RAIZ, 'productos', '*.json')) + glob.glob(os.path.join(RAIZ, '*.json'))):
         try:
             p = json.load(open(f, encoding='utf-8'))
         except Exception as err:
             print('AVISO: no se pudo leer', f, err); continue
+        if not isinstance(p, dict): continue
         if not p.get('nombre') or p.get('categoria') not in CATEGORIAS:
             print('AVISO: producto sin nombre o categoría, se omite:', f); continue
         if p.get('oculto'): continue
@@ -100,14 +102,22 @@ def ficha(p):
 def main():
     shutil.rmtree(SALIDA, ignore_errors=True)
     os.makedirs(SALIDA)
-    shutil.copytree(os.path.join(RAIZ, 'fotos'), os.path.join(SALIDA, 'fotos'))  # fotos originales, sin tocar
+    # fotos originales, sin tocar: las de fotos/ y las sueltas en la raíz
+    os.makedirs(os.path.join(SALIDA, 'fotos'))
+    for d in (RAIZ, os.path.join(RAIZ, 'fotos')):
+        if not os.path.isdir(d): continue
+        for f in os.listdir(d):
+            if f.lower().endswith(('.jpg', '.jpeg', '.png', '.webp', '.gif', '.heic', '.avif')):
+                shutil.copyfile(os.path.join(d, f), os.path.join(SALIDA, 'fotos', f))
     shutil.copyfile(os.path.join(RAIZ, 'estilos.css'), os.path.join(SALIDA, 'estilos.css'))
     prods = leer_productos()
-    plantilla_ficha = open(os.path.join(RAIZ, 'plantillas', 'producto.html'), encoding='utf-8').read()
+    # las plantillas pueden estar en plantillas/ o sueltas en la raíz
+    PL = os.path.join(RAIZ, 'plantillas') if os.path.isdir(os.path.join(RAIZ, 'plantillas')) else RAIZ
+    plantilla_ficha = open(os.path.join(PL, 'producto.html'), encoding='utf-8').read()
     paginas_cat = {pag: cat for cat, (_, pag) in CATEGORIAS.items()}
-    for f in sorted(os.listdir(os.path.join(RAIZ, 'plantillas'))):
+    for f in sorted(os.listdir(PL)):
         if not f.endswith('.html') or f == 'producto.html': continue
-        s = open(os.path.join(RAIZ, 'plantillas', f), encoding='utf-8').read()
+        s = open(os.path.join(PL, f), encoding='utf-8').read()
         if f in paginas_cat:
             s = s.replace('<!--PRODUCTOS-->', ''.join(tarjeta(p) for p in prods if p['categoria'] == paginas_cat[f]))
         elif f == 'index.html':
