@@ -1,0 +1,11 @@
+{
+  "nombre": "PRUEBA",
+  "categoria": "Zagalejos",
+  "estado": "Disponible",
+  "precio": "1€",
+  "destacado": false,
+  "oculto": false,
+  "fotos": [
+    "fotos/DSC_6079.jpg"
+  ]
+}
