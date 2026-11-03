@@ -101,11 +101,18 @@ def ficha(p):
 
 PIE_VIEJO = 'class="h-16 sm:h-20 md:h-24 lg:h-28 w-auto max-w-full object-contain mb-6 brightness-0 invert opacity-90" src="fotos/logo_zaraguiela_def._color_sin_fondo.png"'
 PIE_NUEVO = 'class="h-24 sm:h-28 md:h-32 w-auto max-w-full object-contain mb-6" src="fotos/sello-pie.png"'
+def buscar_sello():
+    # el sello del pie puede llamarse sello-pie.png o parecido (sello-pie PNG.png...)
+    for d in (RAIZ, os.path.join(RAIZ, 'fotos')):
+        if os.path.isdir(d):
+            for f in sorted(os.listdir(d)):
+                if f.lower().startswith('sello-pie') and f.lower().endswith('.png'):
+                    return os.path.join(d, f)
+    return None
+
 def logo_pie(s):
-    # logo del pie: sello crema con el logo a color (si se ha subido sello-pie.png)
-    if os.path.exists(os.path.join(RAIZ, 'sello-pie.png')) or os.path.exists(os.path.join(RAIZ, 'fotos', 'sello-pie.png')):
-        return s.replace(PIE_VIEJO, PIE_NUEVO)
-    return s
+    # logo del pie: sello crema con el logo a color
+    return s.replace(PIE_VIEJO, PIE_NUEVO) if buscar_sello() else s
 
 def main():
     shutil.rmtree(SALIDA, ignore_errors=True)
@@ -118,6 +125,8 @@ def main():
             if f.lower().endswith(('.jpg', '.jpeg', '.png', '.webp', '.gif', '.heic', '.avif')):
                 shutil.copyfile(os.path.join(d, f), os.path.join(SALIDA, 'fotos', f))
     shutil.copyfile(os.path.join(RAIZ, 'estilos.css'), os.path.join(SALIDA, 'estilos.css'))
+    if buscar_sello():
+        shutil.copyfile(buscar_sello(), os.path.join(SALIDA, 'fotos', 'sello-pie.png'))
     prods = leer_productos()
     # las plantillas pueden estar en plantillas/ o sueltas en la raíz
     PL = os.path.join(RAIZ, 'plantillas') if os.path.isdir(os.path.join(RAIZ, 'plantillas')) else RAIZ
