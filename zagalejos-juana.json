@@ -5,12 +5,13 @@
   "precio": "180€",
   "orden": 10,
   "destacado": true,
-  "descripcion": "La tradición nunca pasa de moda, y este zagalejo es la prueba perfecta. Compuesto por dos volantes, nuestro zagalejo JUANA es una auténtica joya visual. Su combinación de estampados y colores tierra crea contrastes aportando luz, volumen y un movimiento espectacular. La falda floral rompe con el primer volante de sutiles rayas tostadas, terminando en otro volante inferior de color tierra sólido que le da peso y carácter a la falda.\nCada volante está rematado con delicadas puntillas, entredoses y picunelas al tono, dándole ese acabado auténtico y cuidado que caracteriza a Zaragüela.\nConfeccionado con los 3 metros de rigor para garantizar ese vuelo tradicional tan bonito al caminar o al bailar, manteniéndose súper cómodo para disfrutar de todo el día del Bando.",
+  "oculto": false,
+  "descripcion": "La tradición nunca pasa de moda, y este zagalejo es la prueba perfecta. Nuestro zagalejo JUANA es una auténtica joya visual. Su combinación de estampados y colores tierra crea contrastes aportando luz, volumen y un movimiento espectacular. La tradición nunca pasa de moda, y Juana es la prueba de ello.",
   "caracteristicas": [
-    "Confeccionado en nuestro taller en el corazón de la Huerta Murciana",
-    "Personalizable: elige telas, colores y detalles de acabado a tu gusto",
-    "Zagalejo único — no encontrarás otro igual",
-    "Ideal para el Bando de la Huerta y eventos tradicionales"
+    "Falda en estampado floral en tonos rosa empolvado",
+    "Primer volante de rayas tostadas y segundo volante en color tierra liso",
+    "Puntillas, entredoses y piculinas al tono en cada volante",
+    "Incluye faltriquera a juego, con los mismos tejidos y puntillas"
   ],
   "fotos": [
     "img_1844_1-1776712900438.jpg",
