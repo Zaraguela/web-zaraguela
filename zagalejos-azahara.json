@@ -5,12 +5,14 @@
   "precio": "180€",
   "orden": 70,
   "destacado": false,
-  "descripcion": "Un paseo por nuestra huerta... Este zagalejo contrasta con sus colores entre los limoneros repletos de azahar.",
+  "oculto": false,
+  "descripcion": "Un paseo por nuestra huerta... Este zagalejo AZAHARA contrasta con sus colores entre los limoneros repletos de azahar.",
   "caracteristicas": [
-    "Zagalejo: El tejido principal en tono verde agua, de acabado atornasolado.",
-    "Volantes: El volante superior es de una tela de 100% algodón con estampado floral tupido (estilo indiana). El volante inferior: Tejido liso en color rosa intenso con detalles de puntillas adornadas con piculinas",
-    "Pico: Con tejido liso color crudo de 100% lino, rematado con puntilla de encaje crudo muy ancha y entredós intercaladado.",
-    "Delantal: A juego con el pico y con detalles de nervios y entredoses"
+    "Zagalejo en tono verde agua, de acabado atornasolado.",
+    "Primer volante en algodón 100 % con estampado floral tupido, estilo indiana",
+    "Segundo volante liso en rosa intenso, con puntillas y piculinas",
+    "Pico en lino 100 % color crudo, con puntilla de encaje ancha y entredós",
+    "Delantal a juego con el pico, con nervios y entredoses"
   ],
   "fotos": [
     "img_1911.jpg",
