@@ -5,12 +5,13 @@
   "precio": "180€",
   "orden": 20,
   "destacado": false,
-  "descripcion": "Entre la tradición y el valor de lo hecho con paciencia✨\n\nUn conjunto coordinado, confeccionado con tejidos naturales y acabados cuidados, pensado para lucir en el Bando de la Huerta y en cualquier celebración de tradición murciana. 🌾🍋",
+  "oculto": false,
+  "descripcion": "Hecho con paciencia y pensado para dos. VICTORIA tiene pareja: el chaleco VÍCTOR, para que novio y novia vayan conjuntados hasta el último detalle.",
   "caracteristicas": [
-    "El tejido principal del zagalejo está confeccionado en un tejido de estampado floral, haciendo juego de forma coordinada con el chaleco masculino, así como una faltriquera (bolsillo tradicional) del mismo tejido floral, decorada con encaje blanco y piculina.",
-    "Detalles de los volantes: El bajo cuenta con un amplio volante superior en un tono verde oliva sólido que está minuciosamente ornamentado con piculinas en contraste y rematado con una delicada puntilla de encaje blanco.   El volante inferior asoma con un patrón clásico de cuadros en tonos tierra, mostaza y azul oscuro, terminada igualmente con encaje blanco en el dobladillo, creando un contraste visual muy interesante al caminar o recoger la falda.",
-    "Delantal: En la parte frontal, el conjunto se viste con un delantal de lino o algodón en tono crudo natural. Este delantal destaca por su trabajo de tiras bordadas o entredoses de encaje horizontales y está ribeteado en todo su contorno curvo con una puntilla calada.",
-    "Él viste chaleco en el mismo tejido floral que la falda, y calzón en verde oliva."
+    "Zagalejo en estampado floral, a juego con el chaleco VÍCTOR",
+    "Primer volante en verde oliva con piculinas en contraste y puntilla de encaje blanco",
+    "Segundo volante de cuadros en tierra, mostaza y azul oscuro, rematado en encaje blanco",
+    "Delantal en tono crudo natural, con entredoses de encaje y contorno de puntilla calada"
   ],
   "fotos": [
     "dsc_5743.jpeg",
