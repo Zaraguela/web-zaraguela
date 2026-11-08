@@ -1,16 +1,18 @@
 {
-  "nombre": "Víctor",
+  "nombre": "VÍCTOR",
   "categoria": "Chalecos",
   "estado": "Disponible",
   "precio": "90€",
   "orden": 10,
   "destacado": false,
-  "descripcion": "Chaleco del siglo XIX en tejido floral. Botones forrados de su propia tela. Disponible calzón para combinar.",
+  "oculto": false,
+  "descripcion": "El compañero perfecto de VICTORIA. Un chaleco de inspiración siglo XIX para que él también luzca la tradición con todo detalle.",
   "caracteristicas": [
-    "Confeccionado 100% a mano en nuestro taller de Murcia",
-    "Personalizable: elige telas, colores y detalles de acabado",
+    "Chaleco de inspiración siglo XIX en tejido floral en 100% algodón",
+    "Botones forrados con su propia tela",
     "Pieza única — no encontrarás otra igual",
-    "Ideal para el Bando de la Huerta y eventos tradicionales"
+    "A juego con el zagalejo VICTORIA",
+    "Calzón disponible para completar el conjunto"
   ],
   "fotos": [
     "dsc_5774-1791486914959.jpg",
