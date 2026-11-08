@@ -5,11 +5,13 @@
   "precio": "180€",
   "orden": 60,
   "destacado": false,
+  "oculto": false,
   "descripcion": "Este conjunto respira arraigo y una profunda serenidad. Es un homenaje a la tierra, diseñado con una paleta de colores profundos que contrastan con la delicadeza de sus encajes. Una pieza donde la sobriedad del negro y la frescura de las flores se complementan.",
   "caracteristicas": [
-    "Zagalejo: La parte superior de la falda presenta un bonito tejido de algodón con fondo oscuro salpicado por un tupido estampado de flores blancas y hojas, evocando la naturaleza de la huerta.",
-    "Volantes: El diseño se rompe visualmente con un primer volante en tono crudo con finas rayas verticales y está rematado con una puntilla de encaje tostado.   El segundo volante asomaen un  verde bosque, rematado con una delicada puntilla blanca de algodón.",
-    "Pico y Delantal: Ambas piezas están confeccionadas en un elegante y sobrio tejido negro. El conjunto se ilumina gracias a los  entredoses y ribetes de encaje en tono arena"
+    "Zagalejo en algodón de fondo oscuro con estampado de flores blancas y hojas",
+    "Primer volante en crudo con finas rayas verticales y puntilla de encaje tostado",
+    "Segundo volante en verde bosque con puntilla de algodón blanca",
+    "Pico y delantal en tejido negro, con entredoses y ribetes de encaje en tono arena"
   ],
   "fotos": [
     "img_1932_1.jpg",
