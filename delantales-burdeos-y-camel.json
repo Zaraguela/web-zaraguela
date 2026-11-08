@@ -1,16 +1,17 @@
 {
-  "nombre": "Burdeos y Camel",
+  "nombre": "BURDEOS y CAMEL",
   "categoria": "Delantales",
   "estado": "Disponible",
   "precio": "50€",
   "orden": 20,
   "destacado": false,
-  "descripcion": "Delantal elaborado en tejido 100% Lino con puntilla y entredós de bolillo en 100% Algodón con detalles de nervios y lazo de raso",
+  "oculto": false,
+  "descripcion": "El remate que completa el conjunto huertano, con todo el encanto de los detalles hechos con cariño",
   "caracteristicas": [
-    "Confeccionado 100% a mano en nuestro taller de Murcia",
-    "Personalizable: elige telas, colores y detalles de acabado",
-    "Pieza única — no encontrarás otra igual",
-    "Ideal para el Bando de la Huerta y eventos tradicionales"
+    "Tejido 100 % lino",
+    "Puntilla y entredós de bolillo en algodón 100 %",
+    "Detalles de nervios y lazo de raso",
+    "A juego con el pico Burdeos y Camel"
   ],
   "fotos": [
     "delantal_burdeos_camel_estilo.jpg",
