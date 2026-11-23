@@ -67,4 +67,49 @@ def preparar_fotos():
                 rgba = im.convert('RGBA')
                 if rgba.getextrema()[3][0] < 250:   # tiene transparencia (logos): no se toca
                     continue
-                im =
+                im = rgba
+            im = im.convert('RGB')
+            im.thumbnail((LIGERA_MAX, LIGERA_MAX), Image.LANCZOS)
+            salida = os.path.join(destino, os.path.splitext(nombre)[0] + '.jpg')
+            im.save(salida, 'JPEG', quality=LIGERA_CALIDAD, subsampling=0, optimize=True, progressive=True)
+            if os.path.getsize(salida) > os.path.getsize(ruta) * 0.8:   # no compensa
+                os.remove(salida); continue
+            mapa['fotos/' + nombre] = 'fotos/web/' + os.path.splitext(nombre)[0] + '.jpg'
+        except Exception as err:
+            print('AVISO foto', nombre, err)
+    print('Fotos ligeras preparadas:', len(mapa))
+    return mapa
+
+ZOOM = """<style>[data-gal=main],button.break-inside-avoid img{cursor:zoom-in}</style><script>(function(){
+document.addEventListener('click',function(e){var im=e.target.closest('[data-gal=main]');if(!im)return;
+var src=im.getAttribute('src'),o=null;document.querySelectorAll('img[data-original]').forEach(function(x){if(!o&&x.getAttribute('src')===src)o=x.getAttribute('data-original');});
+if(!o)o=im.getAttribute('data-original')||src;
+var ov=document.createElement('div');ov.style.cssText='position:fixed;inset:0;z-index:200;background:rgba(30,12,8,.96);overflow:auto;-webkit-overflow-scrolling:touch;text-align:center';
+ov.innerHTML='<button aria-label="Cerrar" style="position:fixed;top:14px;right:14px;z-index:2;width:44px;height:44px;border-radius:50%;border:0;background:rgba(245,237,224,.25);color:#f5ede0;font-size:26px;cursor:pointer">×</button><p style="color:#f5ede0;font:14px sans-serif;margin:14px 60px">Cargando la foto en alta calidad… Toca la foto para ver el detalle</p><img alt="" style="max-width:100%;max-height:85vh;cursor:zoom-in;display:block;margin:0 auto">';
+var big=ov.querySelector('img'),p=ov.querySelector('p');big.alt=im.alt||'';big.onload=function(){p.textContent='Toca la foto para ver el detalle';};big.src=o;
+big.onclick=function(ev){ev.stopPropagation();if(big.style.maxWidth==='none'){big.style.maxWidth='100%';big.style.maxHeight='85vh';big.style.cursor='zoom-in';}else{big.style.maxWidth='none';big.style.maxHeight='none';big.style.cursor='zoom-out';}};
+function close(){ov.remove();document.removeEventListener('keydown',esc);}function esc(k){if(k.key==='Escape')close();}
+ov.onclick=function(ev){if(ev.target===ov||ev.target.closest('button'))close();};document.addEventListener('keydown',esc);document.body.appendChild(ov);});
+})();</script>"""
+
+MAPA = preparar_fotos()
+
+n = 0
+for f in glob.glob(os.path.join(RAIZ, 'public', '*.html')):
+    s = open(f, encoding='utf-8').read()
+    t = s.replace(VIEJO, NUEVO).replace('zaraguela@icloud.com', EMAIL)
+    for viejo, nuevo in TEXTOS:
+        t = t.replace(viejo, nuevo)
+    if MAPA:
+        for orig, ligera in MAPA.items():
+            t = t.replace('src="' + orig + '"', 'src="' + ligera + '" data-original="' + orig + '"')
+        t = t.replace('big.src=img.src;', "big.src=img.getAttribute('data-original')||img.src;")
+        if '</body>' in t and 'data-gal=main],button' not in t:
+            t = t.replace('</body>', ZOOM + '</body>', 1)
+    if os.path.basename(f).startswith('zagalejos-') and FIN_LISTA in t:
+        lista = t[t.find('Características</h3>'):t.find(FIN_LISTA)]
+        if 'faltriquera' not in lista.lower():
+            t = t.replace(FIN_LISTA, FALTRIQUERA + FIN_LISTA, 1)
+    if t != s:
+        open(f, 'w', encoding='utf-8').write(t); n += 1
+print('Retoques aplicados en', n, 'páginas')
