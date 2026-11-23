@@ -5,12 +5,13 @@
   "precio": "50€",
   "orden": 10,
   "destacado": false,
-  "descripcion": "Delantal elaborado en tejido 100% Tencel con puntillas y entredoses de bolillo en 100% Algodón con detalles de nervios y lazo de raso.",
+  "oculto": false,
+  "descripcion": "Sobrio y señorial, el compañero ideal del pico Negro y Camel para un conjunto de los de antes.",
   "caracteristicas": [
-    "Confeccionado 100% a mano en nuestro taller de Murcia",
-    "Personalizable: elige telas, colores y detalles de acabado",
-    "Pieza única — no encontrarás otra igual",
-    "Ideal para el Bando de la Huerta y eventos tradicionales"
+    "Tejido 100 % Tencel",
+    "Puntillas y entredoses de bolillo en algodón 100 %",
+    "Detalles de nervios y lazo de raso",
+    "A juego con el pico Negro y Camel"
   ],
   "fotos": [
     "img_5795-1791480262941.jpg",
