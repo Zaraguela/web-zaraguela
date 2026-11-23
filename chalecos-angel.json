@@ -1,0 +1,9 @@
+{
+  "nombre": "ÁNGEL",
+  "categoria": "Chalecos",
+  "estado": "Disponible",
+  "precio": "80€",
+  "orden": 30,
+  "destacado": false,
+  "oculto": false
+}
