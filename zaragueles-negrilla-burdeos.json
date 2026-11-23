@@ -5,12 +5,12 @@
   "precio": "60€",
   "orden": 10,
   "destacado": false,
-  "descripcion": "Negrilla de espiguilla con zaragüel",
+  "oculto": false,
+  "descripcion": "Agoo esencial para el huertano: negrilla de espiguilla con su zaragüel ",
   "caracteristicas": [
-    "Confeccionado 100% a mano en nuestro taller de Murcia",
-    "Personalizable: elige telas, colores y detalles de acabado",
-    "Pieza única — no encontrarás otra igual",
-    "Ideal para el Bando de la Huerta y eventos tradicionales"
+    "Negrilla de espiguilla en burdeos",
+    "Incluye zaragüel",
+    "Tejido en 100% algodón"
   ],
   "fotos": [
     "img_5734-1791484699905.jpg",
