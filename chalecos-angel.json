@@ -5,5 +5,9 @@
   "precio": "80€",
   "orden": 30,
   "destacado": false,
-  "oculto": false
+  "oculto": false,
+  "fotos": [
+    "fotos/angel-chaleco-1.jpg",
+    "fotos/angel-chaleco.jpg"
+  ]
 }
