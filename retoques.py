@@ -3,8 +3,10 @@
 - Email de contacto visible: hola@zaraguela.es
 - Zagalejos: añade "Incluye faltriquera a juego" a las características (si no la mencionan ya).
 - Textos generales: sin "100% artesanal" ni "hecho a mano".
+- Fotos: la web muestra una versión ligera; al tocar la foto se abre el ORIGINAL intacto.
+  Los originales nunca se modifican.
 """
-import glob, os
+import glob, os, sys, subprocess, json
 RAIZ = os.path.dirname(os.path.abspath(__file__))
 CLAVE = '0f424496-0f25-4064-9c37-24830ef9fe17'
 EMAIL = 'hola@zaraguela.es'
@@ -34,16 +36,35 @@ TEXTOS = [
     ('Cada pieza es única y está hecha a mano en nuestro taller de Murcia.', 'Cada pieza es única y está confeccionada en nuestro taller de Murcia.'),
 ]
 
-n = 0
-for f in glob.glob(os.path.join(RAIZ, 'public', '*.html')):
-    s = open(f, encoding='utf-8').read()
-    t = s.replace(VIEJO, NUEVO).replace('zaraguela@icloud.com', EMAIL)
-    for viejo, nuevo in TEXTOS:
-        t = t.replace(viejo, nuevo)
-    if os.path.basename(f).startswith('zagalejos-') and FIN_LISTA in t:
-        lista = t[t.find('Características</h3>'):t.find(FIN_LISTA)]
-        if 'faltriquera' not in lista.lower():
-            t = t.replace(FIN_LISTA, FALTRIQUERA + FIN_LISTA, 1)
-    if t != s:
-        open(f, 'w', encoding='utf-8').write(t); n += 1
-print('Retoques aplicados en', n, 'páginas')
+# ---------- FOTOS: versión ligera para mostrar, original intacto para ampliar ----------
+LIGERA_MAX = 2000      # píxeles del lado largo
+LIGERA_CALIDAD = 90    # calidad JPEG (sin perder color: submuestreo 4:4:4)
+MINIMO_KB = 400        # las fotos más pequeñas que esto no se tocan
+
+def preparar_fotos():
+    try:
+        from PIL import Image, ImageOps
+    except ImportError:
+        subprocess.run([sys.executable, '-m', 'pip', 'install', '--quiet', 'pillow'])
+        try:
+            from PIL import Image, ImageOps
+        except ImportError:
+            print('AVISO: no se pudo instalar Pillow; se usan las fotos originales'); return {}
+    origen = os.path.join(RAIZ, 'public', 'fotos')
+    destino = os.path.join(origen, 'web')
+    os.makedirs(destino, exist_ok=True)
+    mapa = {}
+    for nombre in sorted(os.listdir(origen)):
+        ruta = os.path.join(origen, nombre)
+        if not os.path.isfile(ruta) or not nombre.lower().endswith(('.jpg', '.jpeg', '.png', '.webp')):
+            continue
+        if os.path.getsize(ruta) < MINIMO_KB * 1024:
+            continue
+        try:
+            im = Image.open(ruta)
+            im = ImageOps.exif_transpose(im)
+            if im.mode in ('RGBA', 'LA', 'P'):
+                rgba = im.convert('RGBA')
+                if rgba.getextrema()[3][0] < 250:   # tiene transparencia (logos): no se toca
+                    continue
+                im =
