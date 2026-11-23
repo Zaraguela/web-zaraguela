@@ -6,6 +6,12 @@
   "orden": 30,
   "destacado": false,
   "oculto": false,
+  "descripcion": "Señorial y con carácter. ÁNGEL combina un brocado oscuro con flores en tonos oliva y oro",
+  "caracteristicas": [
+    "Chaleco en tejido brocado oscuro con motivos florales en oliva y dorado",
+    "Botones forrados de su mismo tejido",
+    "Calzón disponible para completar el conjunto"
+  ],
   "fotos": [
     "fotos/angel-chaleco-1.jpg",
     "fotos/angel-chaleco.jpg",
